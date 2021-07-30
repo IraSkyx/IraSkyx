@@ -1,6 +1,8 @@
 {
   "name": "skyx.github.io",
+  "website": "skyx.github.io",
   "version": "0.1.0",
+  "description": "Skyx portfolio",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,15 +10,35 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false
+  },
   "dependencies": {
-    "next": "11.0.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "@emotion/cache": "^11.4.0",
+    "@emotion/react": "^11.4.0",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@material-ui/core": "^5.0.0-beta.1",
+    "@material-ui/icons": "^5.0.0-beta.1",
+    "next": "^11.0.2-canary.21",
+    "react": "0.0.0-experimental-c76e4dbbc-20210722",
+    "react-dom": "0.0.0-experimental-c76e4dbbc-20210722"
   },
   "devDependencies": {
+    "@swc/core": "^1.2.66",
     "@types/react": "17.0.15",
+    "autoprefixer": "^10.3.1",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "postcss": "^8.3.6",
+    "swc-loader": "^0.1.14",
+    "tailwindcss": "^2.2.7",
     "typescript": "4.3.5"
   }
 }
