@@ -1,10 +1,11 @@
 import { Children } from 'react'
 import createCache from '@emotion/cache'
+import { Head as NextHead } from 'next/document'
 import { CacheProvider } from '@emotion/react'
 import createEmotionServer from '@emotion/server/create-instance'
 import Document, { Html, Main, NextScript } from 'next/document'
 
-import Head from './_head'
+import Head from '../components/utils/Head'
 
 function getCache() {
   const cache = createCache({ key: 'css', prepend: true })
@@ -17,7 +18,9 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <body>
-          <Head />
+          <NextHead>
+            <Head />
+          </NextHead>
           <Main />
           <NextScript />
         </body>

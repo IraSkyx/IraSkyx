@@ -1,13 +1,10 @@
-// eslint-disable-next-line @next/next/no-document-import-in-page
-import { Head as NextHead } from 'next/document'
-
 import { useTheme } from 'styles/theme'
 
 export default function Head() {
   const theme = useTheme()
 
   return (
-    <NextHead>
+    <>
       <meta charSet="utf-8" />
       <meta name="description" content={globalThis.description} key="description" />
 
@@ -67,6 +64,6 @@ export default function Head() {
         content={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/static/images/favicons/android-chrome-512x512.png`}
         key="og:image"
       />
-    </NextHead>
+    </>
   )
 }
