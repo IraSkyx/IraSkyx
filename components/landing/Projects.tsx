@@ -1,15 +1,18 @@
 import Image from 'next/image'
-import { useRouter } from 'next/router'
+import Paper from '@material-ui/core/Paper'
+import Divider from '@material-ui/core/Divider'
 import ImageList from '@material-ui/core/ImageList'
+import Typography from '@material-ui/core/Typography'
 import ImageListItem from '@material-ui/core/ImageListItem'
 
 import bdeIsima from 'public/static/bde-isima.png'
 import undercover from 'public/static/undercover.png'
 import artistocratie from 'public/static/artistocratie.png'
-import { Divider, Paper, Typography } from '@material-ui/core'
+
+import useRouter from 'components/hooks/useRouter'
 
 const Projects: React.FC = () => {
-  const router = useRouter()
+  const { router } = useRouter()
 
   return (
     <div
@@ -18,13 +21,13 @@ const Projects: React.FC = () => {
     >
       {router.asPath === '/projects' && (
         <>
-          <Typography variant="h3" gutterBottom>
+          <Typography variant="h5" gutterBottom>
             Projects
           </Typography>
 
-          <Divider className="mb-6" />
+          <Divider className="m-4" />
 
-          <ImageList sx={{ transform: 'translateZ(0)' }} gap={0}>
+          <ImageList className="my-8" sx={{ transform: 'translateZ(0)' }} gap={0}>
             {itemData.map((item) => {
               const cols = item.featured ? 2 : 1
               const rows = item.featured ? 2 : 1

@@ -14,7 +14,7 @@ import packageJson from 'package.json'
 import { useTheme } from 'styles/theme'
 import * as gtag from 'components/integrations/gtag'
 
-({
+;({
   name: globalThis.appName,
   website: globalThis.website,
   version: globalThis.version,
@@ -50,10 +50,7 @@ function App({ Component, pageProps }: AppProps) {
         </ThemeProvider>
       </CacheProvider>
 
-      <Script
-        src="https://www.googletagmanager.com/gtag/js"
-        id={process.env.NEXT_PUBLIC_GA_TRACKING_ID}
-      />
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`} />
       <Script
         src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"
         strategy="lazyOnload"

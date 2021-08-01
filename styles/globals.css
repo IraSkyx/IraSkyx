@@ -22,9 +22,8 @@ body,
   text-align: left;
 }
 
-#__next {
-  background-size: cover;
-  background-image: url(/static/tiler.svg);
+body {
+  background: url(/static/tiler.svg) no-repeat center center fixed;
 }
 
 a:link,
@@ -96,8 +95,8 @@ img {
   --xyz-rotate-x: 90deg;
   --xyz-rotate-z: -180deg;
   --xyz-origin: -200%;
-  --xyz-stagger: 0.03s;
-  --xyz-duration: 0.21s;
+  --xyz-stagger: 0.15s;
+  --xyz-duration: 0.30s;
   --xyz-perspective: 100px;
   --xyz-translate-z: 100px;
   --xyz-translate-y: 10vh;
@@ -105,4 +104,10 @@ img {
 
 .MuiBottomNavigationAction-label.Mui-selected {
   font-weight: 700;
+}
+
+.MuiTimelineItem-root::before {
+  padding: 0;
+  margin: 0;
+  flex: 0;
 }

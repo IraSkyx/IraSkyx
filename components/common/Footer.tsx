@@ -8,11 +8,10 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 
-interface FooterProps {
-  isMobile?: boolean
-}
+import useMediaQuery from 'components/hooks/useMediaQuery'
 
-const Footer: React.FC<FooterProps> = ({ isMobile }) => {
+const Footer: React.FC = () => {
+  const isMobile = useMediaQuery('md')
   const [open, setOpen] = useState(false)
 
   const handleOpen = () => setOpen(true)
@@ -22,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ isMobile }) => {
   return isMobile ? (
     <SpeedDial
       ariaLabel="Social medias"
-      className="absolute bottom-16 right-4"
+      className="fixed bottom-16 right-4"
       icon={
         <lord-icon
           src="https://cdn.lordicon.com/koyivthb.json"
