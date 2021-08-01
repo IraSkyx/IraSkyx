@@ -46,6 +46,15 @@ export function useTheme() {
               secondary: { main: '#fff' },
               error: { main: '#C91F37' },
             },
+            components: {
+              MuiBottomNavigationAction: {
+                styleOverrides: {
+                  label: {
+                    color: prefersDarkMode ? '#fff' : '#2A2E43',
+                  },
+                },
+              },
+            },
           },
           frFR
         )

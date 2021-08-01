@@ -8,6 +8,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 
 import type { AppProps } from 'next/app'
 
+import '@animxyz/core'
 import 'styles/globals.css'
 import packageJson from 'package.json'
 import { useTheme } from 'styles/theme'
