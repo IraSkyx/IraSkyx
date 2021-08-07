@@ -1,7 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind variants;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "tailwindcss/variants";
+
+@import "./animations.css";
 
 @font-face {
   font-family: 'Nexa';
@@ -23,7 +25,23 @@ body,
 }
 
 body {
-  background: url(/static/tiler.svg) no-repeat center center fixed;
+  background-image: url(/static/images/tiler.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 64px right;
+  background-attachment: fixed;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: url(/static/images/tiler-dark.svg);
+    background-color: #504B4B;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    background-position: bottom calc(28px + 64px) right;
+  }
 }
 
 a:link,
@@ -89,17 +107,6 @@ img {
   background: rgba(0, 0, 0, 0.61);
   -webkit-border-radius: 100px;
   border-radius: 100px;
-}
-
-.stagger-group {
-  --xyz-rotate-x: 90deg;
-  --xyz-rotate-z: -180deg;
-  --xyz-origin: -200%;
-  --xyz-stagger: 0.15s;
-  --xyz-duration: 0.30s;
-  --xyz-perspective: 100px;
-  --xyz-translate-z: 100px;
-  --xyz-translate-y: 10vh;
 }
 
 .MuiBottomNavigationAction-label.Mui-selected {

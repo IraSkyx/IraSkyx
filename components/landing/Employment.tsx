@@ -12,8 +12,8 @@ import TimelineConnector from '@material-ui/lab/TimelineConnector'
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator'
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent'
 
-import cgi from 'public/static/cgi.webp'
-import rgu from 'public/static/rgu.webp'
+import cgi from 'public/static/images/cgi.webp'
+import rgu from 'public/static/images/rgu.webp'
 import useRouter from 'components/hooks/useRouter'
 import useMediaQuery from 'components/hooks/useMediaQuery'
 
@@ -38,7 +38,7 @@ const Employment: React.FC = () => {
               imgAlt="CGI Logo"
               title="Site Reliability Engineer"
               location="Clermont-Ferrand, Auvergne-Rhône-Alpes, France"
-              summary="As a Site Reliability Engineer, I conducted a comprehensive and comparative study of state-of-the-art application monitoring tools for tracing in distributed environment including Open Telemetry, Jaeger/Zipkin, Linkerd/Istio."
+              summary="As a Site Reliability Engineer, I conducted a comprehensive and comparative study of state-of-the-art application monitoring tools for tracing in distributed environment including Open Telemetry, Jaeger vs Zipkin, Linkerd vs Istio."
             />
 
             <TLItem

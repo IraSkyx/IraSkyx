@@ -10,12 +10,12 @@ const About: React.FC = () => {
     <div className={router.asPath === '/' ? 'xyz-in' : 'xyz-out'} xyz="fade left ease-in-out">
       {router.asPath === '/' && (
         <>
-          <Typography gutterBottom variant="h5" color="text.secondary" align="center">
+          <Divider className="m-4" />
+
+          <Typography gutterBottom variant="body1" color="text.secondary">
             Site Reliability Engineer @CGI. <br />
             Modern Jamstack web &amp; mobile developer.
           </Typography>
-
-          <Divider className="m-4" />
 
           <div className="my-8"></div>
         </>

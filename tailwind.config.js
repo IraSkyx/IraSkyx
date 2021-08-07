@@ -9,7 +9,10 @@ module.exports = {
       colors: {
         flatBlack: '#121212',
         ...colors,
-      }
+      },
+      minHeight: {
+        64: "64px",
+      },
     },
   },
   variants: {

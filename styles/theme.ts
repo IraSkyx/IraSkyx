@@ -42,16 +42,24 @@ export function useTheme() {
             },
             palette: {
               mode: prefersDarkMode ? 'dark' : 'light',
-              primary: { main: '#2A2E43' },
+              primary: { main: '#121212' },
               secondary: { main: '#fff' },
               error: { main: '#C91F37' },
+              background: {
+                paper: prefersDarkMode ? '#121212' : '#fff',
+              },
             },
             components: {
               MuiBottomNavigationAction: {
                 styleOverrides: {
                   label: {
-                    color: prefersDarkMode ? '#fff' : '#2A2E43',
+                    color: prefersDarkMode ? '#fff' : '#121212',
                   },
+                },
+              },
+              MuiUseMediaQuery: {
+                defaultProps: {
+                  noSsr: true,
                 },
               },
             },

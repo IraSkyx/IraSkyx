@@ -39,10 +39,10 @@ function App({ Component, pageProps }: AppProps) {
     <StrictMode>
       <CacheProvider value={cache}>
         <Head>
-          <title>Skyx Portfolio</title>
+          <title>Adrien Lenoir – {globalThis.description}</title>
           <meta
             name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+            content="minimum-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
           />
         </Head>
         <ThemeProvider theme={theme}>
@@ -50,7 +50,9 @@ function App({ Component, pageProps }: AppProps) {
         </ThemeProvider>
       </CacheProvider>
 
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`} />
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+      />
       <Script
         src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"
         strategy="lazyOnload"

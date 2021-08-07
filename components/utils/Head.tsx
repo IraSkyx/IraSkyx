@@ -34,11 +34,6 @@ export default function Head() {
         sizes="16x16"
         href="/static/images/favicons/favicon-16x16.png"
       />
-      <link
-        rel="mask-icon"
-        href="/static/images/favicons/safari-pinned-tab.svg"
-        color={theme.palette.primary.main}
-      />
 
       <meta name="msapplication-TileColor" content={theme.palette.primary.main} />
       <meta name="theme-color" content={theme.palette.primary.main} />

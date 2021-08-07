@@ -5,9 +5,9 @@ import ImageList from '@material-ui/core/ImageList'
 import Typography from '@material-ui/core/Typography'
 import ImageListItem from '@material-ui/core/ImageListItem'
 
-import bdeIsima from 'public/static/bde-isima.png'
-import undercover from 'public/static/undercover.png'
-import artistocratie from 'public/static/artistocratie.png'
+import bdeIsima from 'public/static/images/bde-isima.png'
+import undercover from 'public/static/images/undercover.png'
+import artistocratie from 'public/static/images/artistocratie.png'
 
 import useRouter from 'components/hooks/useRouter'
 
