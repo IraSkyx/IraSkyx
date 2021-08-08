@@ -4,6 +4,7 @@ module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'media',
+  important: true,
   theme: {
     extend: {
       colors: {
@@ -11,7 +12,7 @@ module.exports = {
         ...colors,
       },
       minHeight: {
-        64: "64px",
+        64: '64px',
       },
     },
   },

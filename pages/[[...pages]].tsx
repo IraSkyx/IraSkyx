@@ -11,9 +11,9 @@ import Menu from 'components/common/Menu'
 import About from 'components/landing/About'
 import Footer from 'components/common/Footer'
 import Skills from 'components/landing/Skills'
-import Projects from 'components/landing/Projects'
 import avatar from 'public/static/images/avatar.png'
 import Employment from 'components/landing/Employment'
+import Projects from 'components/landing/projects/Projects'
 
 const Index: React.FC = () => {
   const theme = useTheme()

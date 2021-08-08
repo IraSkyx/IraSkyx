@@ -25,10 +25,6 @@ const Employment: React.FC = () => {
     <div>
       {router.asPath === '/employment' && (
         <>
-          <Typography variant="h5" gutterBottom>
-            Employment
-          </Typography>
-
           <Divider className="m-4" />
 
           <Timeline className="stagger-group my-8 p-0" position={isMobile ? 'right' : 'alternate'}>

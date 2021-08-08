@@ -2,9 +2,9 @@ import NoSsr from '@material-ui/core/NoSsr'
 import Paper from '@material-ui/core/Paper'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
-import { useState, SyntheticEvent } from 'react'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import Typography from '@material-ui/core/Typography'
+import { useState, SyntheticEvent, useEffect } from 'react'
 import BottomNavigation from '@material-ui/core/BottomNavigation'
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
 
@@ -13,13 +13,17 @@ import useRouter from 'components/hooks/useRouter'
 import useMediaQuery from 'components/hooks/useMediaQuery'
 import useMenuConfig, { Item } from 'components/hooks/useMenuConfig'
 
-const Desktop: React.FC = () => {
-  const { push } = useRouter()
+const Menu: React.FC = () => {
+  const { router, push } = useRouter()
   const items = useMenuConfig()
   const isMobile = useMediaQuery('md')
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(-1)
 
   const onChange = (event: SyntheticEvent, newValue: number) => setValue(newValue)
+
+  useEffect(() => {
+    setValue(items.findIndex((x) => x.path === router.asPath))
+  }, [router.isReady, router.asPath, items])
 
   return (
     <NoSsr>
@@ -68,4 +72,4 @@ const Desktop: React.FC = () => {
   )
 }
 
-export default Desktop
+export default Menu

@@ -10,10 +10,6 @@ const Skills: React.FC = () => {
     <div className={router.asPath === '/skills' ? 'xyz-in' : 'xyz-out'} xyz="fade left ease-in-out">
       {router.asPath === '/skills' && (
         <>
-          <Typography variant="h5" gutterBottom>
-            Skills
-          </Typography>
-
           <Divider className="m-4" />
 
           <div className="my-8"></div>
