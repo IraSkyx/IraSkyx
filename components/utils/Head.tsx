@@ -10,7 +10,7 @@ export default function Head() {
 
       <link
         rel="preload"
-        href="/fonts/Nexa.woff2"
+        href="/fonts/Montserrat.woff2"
         as="font"
         type="font/woff2"
         crossOrigin="anonymous"

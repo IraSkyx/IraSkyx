@@ -1,5 +1,12 @@
 const colors = require('tailwindcss/colors')
 
+const appColors = {
+  appOrange: '#FD8224',
+  appPurple: '#9062F7',
+  appBlue: '#22B1EF',
+  appPink: '#BB6EA2',
+}
+
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -10,6 +17,7 @@ module.exports = {
       colors: {
         flatBlack: '#121212',
         ...colors,
+        ...appColors,
       },
       minHeight: {
         64: '64px',

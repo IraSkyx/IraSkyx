@@ -22,7 +22,7 @@ const Index: React.FC = () => {
     <>
       <Container className="flex flex-col flex-grow justify-center items-center" maxWidth="md">
         <Card className="shadow-2xl p-3 min-w-full overflow-visible mt-16 mb-36 md:mb-4">
-          <CardContent className="flex flex-col items-center space-y-3 p-6">
+          <CardContent className="flex flex-col items-center space-y-3 md:p-6">
             <Link href="/" passHref>
               <Image src={avatar} width={150} height={150} alt="My avatar" placeholder="blur" />
             </Link>

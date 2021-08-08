@@ -35,7 +35,7 @@ export function useTheme() {
         unstable_createMuiStrictModeTheme(
           {
             typography: {
-              fontFamily: ['Nexa', 'Helvetica', 'sans-serif'].join(','),
+              fontFamily: ['Montserrat', 'Helvetica', 'sans-serif'].join(','),
               success: { color: '#4daf7c' },
               warning: { color: '#2980b9' },
               error: { color: '#C91F37' },

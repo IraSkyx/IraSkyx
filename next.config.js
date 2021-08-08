@@ -19,7 +19,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/fonts/Nexa.woff2',
+        source: '/fonts/Montserrat.woff2',
         headers: [
           {
             key: 'Cache-Control',
