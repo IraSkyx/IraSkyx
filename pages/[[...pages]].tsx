@@ -32,7 +32,7 @@ const Index: React.FC = () => {
                 Hi, I&apos;m Adrien Lenoir
               </Typography>
 
-              <Typography variant="subtitle1" align="center" color="textSecondary" gutterBottom>
+              <Typography component="h5" variant="subtitle1" align="center" color="textSecondary" gutterBottom>
                 {globalThis.description}
               </Typography>
             </div>
