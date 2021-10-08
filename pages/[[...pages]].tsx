@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import Card from '@material-ui/core/Card'
-import NoSsr from '@material-ui/core/NoSsr'
-import Container from '@material-ui/core/Container'
-import Typography from '@material-ui/core/Typography'
-import CardContent from '@material-ui/core/CardContent'
+import Card from '@mui/material/Card'
+import NoSsr from '@mui/material/NoSsr'
+import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
+import CardContent from '@mui/material/CardContent'
 
 import { useTheme } from 'styles/theme'
 import Link from 'components/utils/Link'
@@ -32,7 +32,13 @@ const Index: React.FC = () => {
                 Hi, I&apos;m Adrien Lenoir
               </Typography>
 
-              <Typography component="h5" variant="subtitle1" align="center" color="textSecondary" gutterBottom>
+              <Typography
+                component="h5"
+                variant="subtitle1"
+                align="center"
+                color="textSecondary"
+                gutterBottom
+              >
                 {globalThis.description}
               </Typography>
             </div>

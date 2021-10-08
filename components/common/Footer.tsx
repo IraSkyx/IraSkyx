@@ -1,12 +1,12 @@
-import NoSsr from '@material-ui/core/NoSsr'
+import NoSsr from '@mui/material/NoSsr'
 import { useState, cloneElement } from 'react'
-import SpeedDial from '@material-ui/core/SpeedDial'
-import Typography from '@material-ui/core/Typography'
-import SpeedDialAction from '@material-ui/core/SpeedDialAction'
+import SpeedDial from '@mui/material/SpeedDial'
+import Typography from '@mui/material/Typography'
+import SpeedDialAction from '@mui/material/SpeedDialAction'
 
-import GitHubIcon from '@material-ui/icons/GitHub'
-import TwitterIcon from '@material-ui/icons/Twitter'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 import useMediaQuery from 'components/hooks/useMediaQuery'
 
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           ))}
         </SpeedDial>
       ) : (
-        <div className="grid grid-cols-3 gap-4 min-h-64 dark:bg-flatBlack">
+        <div className="grid grid-cols-3 gap-4 min-h-64 bg-white dark:bg-flatBlack">
           {actions.map((action) => (
             <Typography
               key={action.name}

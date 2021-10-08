@@ -1,4 +1,5 @@
 {
     "editor.autoClosingDelete": "always",
-    "editor.autoClosingOvertype": "always"
+    "editor.autoClosingOvertype": "always",
+    "editor.formatOnSave": true
 }

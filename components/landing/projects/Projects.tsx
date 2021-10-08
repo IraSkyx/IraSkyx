@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Divider from '@material-ui/core/Divider'
-import ImageList from '@material-ui/core/ImageList'
+import Divider from '@mui/material/Divider'
+import ImageList from '@mui/material/ImageList'
 
 import bdeIsimaIcon from 'public/static/images/bde-isima.png'
 import undercoverIcon from 'public/static/images/undercover.png'
@@ -26,13 +26,13 @@ const Projects: React.FC = () => {
   const onClose = () => setOpen(false)
 
   return (
-    <div xyz="fade front-3 flip-down-50% duration-10 stagger-5">
+    <div xyz="fade down-100% back-5 stagger-3">
       {router.asPath === '/projects' && (
         <>
           <Divider className="m-4" />
 
           <ImageList
-            className="grid grid-cols-1 md:grid-cols-2 my-8 p-4"
+            className="grid grid-cols-1 md:grid-cols-2"
             sx={{ transform: 'translateZ(0)' }}
             gap={16}
           >

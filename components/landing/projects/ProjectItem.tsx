@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import IconButton from '@material-ui/core/IconButton'
-import Typography from '@material-ui/core/Typography'
-import ImageListItem from '@material-ui/core/ImageListItem'
-import ImageListItemBar from '@material-ui/core/ImageListItemBar'
+import IconButton from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
+import ImageListItem from '@mui/material/ImageListItem'
+import ImageListItemBar from '@mui/material/ImageListItemBar'
 
 import Link from 'components/utils/Link'
 import type { Project } from './Projects'
@@ -40,7 +40,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ item, onClick }) => {
             href={item.url}
             target="_blank noreferrer noopener"
             aria-label={`To ${item.url}`}
-          >
+            size="large">
             <lord-icon
               src="https://cdn.lordicon.com/udwhdpod.json"
               trigger="loop"
@@ -53,7 +53,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ item, onClick }) => {
         }
       />
     </ImageListItem>
-  )
+  );
 }
 
 export default ProjectItem

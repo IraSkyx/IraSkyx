@@ -1,5 +1,5 @@
-import type { Breakpoint } from '@material-ui/system'
-import useMUIMediaQuery from '@material-ui/core/useMediaQuery'
+import type { Breakpoint } from '@mui/system'
+import useMUIMediaQuery from '@mui/material/useMediaQuery'
 
 import { useTheme } from 'styles/theme'
 

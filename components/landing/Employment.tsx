@@ -1,19 +1,20 @@
 import Image from 'next/image'
-import Divider from '@material-ui/core/Divider'
-import Timeline from '@material-ui/lab/Timeline'
-import Accordion from '@material-ui/core/Accordion'
-import Typography from '@material-ui/core/Typography'
-import TimelineItem from '@material-ui/lab/TimelineItem'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import TimelineContent from '@material-ui/lab/TimelineContent'
-import AccordionDetails from '@material-ui/core/AccordionDetails'
-import AccordionSummary from '@material-ui/core/AccordionSummary'
-import TimelineConnector from '@material-ui/lab/TimelineConnector'
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator'
-import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent'
+import Divider from '@mui/material/Divider'
+import Timeline from '@mui/lab/Timeline'
+import Accordion from '@mui/material/Accordion'
+import Typography from '@mui/material/Typography'
+import TimelineItem from '@mui/lab/TimelineItem'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import TimelineContent from '@mui/lab/TimelineContent'
+import AccordionDetails from '@mui/material/AccordionDetails'
+import AccordionSummary from '@mui/material/AccordionSummary'
+import TimelineConnector from '@mui/lab/TimelineConnector'
+import TimelineSeparator from '@mui/lab/TimelineSeparator'
+import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent'
 
 import cgi from 'public/static/images/cgi.webp'
 import rgu from 'public/static/images/rgu.webp'
+import kmtx from 'public/static/images/kmtx.png'
 import useRouter from 'components/hooks/useRouter'
 import useMediaQuery from 'components/hooks/useMediaQuery'
 
@@ -22,12 +23,21 @@ const Employment: React.FC = () => {
   const isMobile = useMediaQuery('md')
 
   return (
-    <div>
+    <div xyz="fade down-100% back-5 stagger-3">
       {router.asPath === '/employment' && (
         <>
           <Divider className="m-4" />
 
-          <Timeline className="stagger-group my-8 p-0" position={isMobile ? 'right' : 'alternate'}>
+          <Timeline className="my-8 p-0" position={isMobile ? 'right' : 'alternate'}>
+            <TLItem
+              date="Sept. 2021 - Now"
+              img={kmtx}
+              imgAlt="KMTX Logo"
+              title="Junior Software Engineer"
+              location="Remote - Paris, Île-de-France, France"
+              summary="Building the ad platform of the Open Web https://vibe.co"
+            />
+
             <TLItem
               date="Sept. 2020 - Aug. 2021"
               img={cgi}

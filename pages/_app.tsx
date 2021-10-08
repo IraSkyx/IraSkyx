@@ -1,28 +1,22 @@
+import '@animxyz/core'
+import 'styles/globals.css'
+
 import Head from 'next/head'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
-import createCache from '@emotion/cache'
-import { StrictMode, useEffect } from 'react'
-import { CacheProvider } from '@emotion/react'
-import { ThemeProvider } from '@material-ui/core/styles'
-
 import type { AppProps } from 'next/app'
+import { StrictMode, useEffect } from 'react'
+import { ThemeProvider } from '@mui/material/styles'
 
-import '@animxyz/core'
-import 'styles/globals.css'
 import packageJson from 'package.json'
 import { useTheme } from 'styles/theme'
 import * as gtag from 'components/integrations/gtag'
-
 ;({
   name: globalThis.appName,
   website: globalThis.website,
   version: globalThis.version,
   description: globalThis.description,
 } = packageJson)
-
-const cache = createCache({ key: 'css', prepend: true })
-cache.compat = true
 
 function App({ Component, pageProps }: AppProps) {
   const theme = useTheme()
@@ -37,18 +31,16 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <StrictMode>
-      <CacheProvider value={cache}>
-        <Head>
-          <title>Adrien Lenoir – {globalThis.description}</title>
-          <meta
-            name="viewport"
-            content="minimum-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
-          />
-        </Head>
-        <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </CacheProvider>
+      <Head>
+        <title>Adrien Lenoir – {globalThis.description}</title>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
+        />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
 
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
@@ -58,6 +50,7 @@ function App({ Component, pageProps }: AppProps) {
         strategy="lazyOnload"
       />
       <Script
+        id="analytics"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -72,4 +65,5 @@ function App({ Component, pageProps }: AppProps) {
     </StrictMode>
   )
 }
+
 export default App

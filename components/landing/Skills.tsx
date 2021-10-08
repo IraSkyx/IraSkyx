@@ -1,5 +1,4 @@
-import Divider from '@material-ui/core/Divider'
-import Typography from '@material-ui/core/Typography'
+import Divider from '@mui/material/Divider'
 
 import useRouter from 'components/hooks/useRouter'
 

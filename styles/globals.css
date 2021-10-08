@@ -1,17 +1,23 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-@import "tailwindcss/variants";
-
-@import "./animations.css";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/variants';
+@import './animations.css';
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Nexa';
   font-style: normal;
   font-display: optional;
-  src: url(/fonts/Montserrat.ttf) format('woff2');
+  src: url(/fonts/Nexa.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F,
     U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+* {
+  font-family: 'Nexa', 'Helvetica Neue', sans-serif;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  outline: none !important;
 }
 
 html,
@@ -25,16 +31,14 @@ body,
 }
 
 body {
-  background-image: url(/static/images/tiler.svg);
-  background-repeat: no-repeat;
-  background-position: bottom 64px right;
-  background-attachment: fixed;
+  background: url(/static/images/tiler.svg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     background-image: url(/static/images/tiler-dark.svg);
-    background-color: #504B4B;
+    background-color: #504b4b;
   }
 }
 
@@ -52,13 +56,6 @@ a:active {
 
 a:hover {
   cursor: pointer;
-}
-
-* {
-  font-family: Montserrat, Helvetica Neue, sans-serif;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
-  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
-  outline: none !important;
 }
 
 img {

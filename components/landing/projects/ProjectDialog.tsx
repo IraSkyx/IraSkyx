@@ -1,16 +1,16 @@
 import { forwardRef } from 'react'
-import Box from '@material-ui/core/Box'
-import Slide from '@material-ui/core/Slide'
-import Paper from '@material-ui/core/Paper'
-import Dialog from '@material-ui/core/Dialog'
-import IconButton from '@material-ui/core/IconButton'
-import Typography from '@material-ui/core/Typography'
-import DialogTitle from '@material-ui/core/DialogTitle'
-import DialogContent from '@material-ui/core/DialogContent'
-import { TransitionProps } from '@material-ui/core/transitions'
-import DialogContentText from '@material-ui/core/DialogContentText'
+import Box from '@mui/material/Box'
+import Slide from '@mui/material/Slide'
+import Paper from '@mui/material/Paper'
+import Dialog from '@mui/material/Dialog'
+import IconButton from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
+import DialogTitle from '@mui/material/DialogTitle'
+import DialogContent from '@mui/material/DialogContent'
+import { TransitionProps } from '@mui/material/transitions'
+import DialogContentText from '@mui/material/DialogContentText'
 
-import CloseIcon from '@material-ui/icons/Close'
+import CloseIcon from '@mui/icons-material/Close'
 
 import Link from 'components/utils/Link'
 import type { Project } from './Projects'
@@ -50,7 +50,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ open, item, onClose }) =>
         className="z-10 fixed top-6 right-6 bg-gray-700/40 text-white"
         onClick={onClose}
         aria-label="Close"
-      >
+        size="large">
         <CloseIcon />
       </IconButton>
 
@@ -77,7 +77,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ open, item, onClose }) =>
               href={item?.url}
               target="_blank noreferrer noopener"
               aria-label={`To ${item.url}`}
-            >
+              size="large">
               <lord-icon
                 src="https://cdn.lordicon.com/udwhdpod.json"
                 trigger="loop"
@@ -95,7 +95,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ open, item, onClose }) =>
         <DialogContentText id="project-dialog-description">{item?.content}</DialogContentText>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
 
 export default ProjectDialog

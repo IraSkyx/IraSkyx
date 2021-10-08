@@ -1,30 +1,7 @@
 import { useMemo } from 'react'
-import { frFR } from '@material-ui/core/locale'
-import { responsiveFontSizes, unstable_createMuiStrictModeTheme, useMediaQuery } from '@material-ui/core'
-
-//@see https://codesandbox.io/s/fontsizetheme-material-demo-forked-l9u05
-
-declare module '@material-ui/core/styles/createTypography' {
-  interface Typography {
-    success: CSSProperties
-    warning: CSSProperties
-    error: CSSProperties
-  }
-
-  interface TypographyOptions {
-    success?: CSSProperties
-    warning: CSSProperties
-    error: CSSProperties
-  }
-}
-
-declare module '@material-ui/core/Typography/Typography' {
-  interface TypographyPropsVariantOverrides {
-    success: true
-    warning: true
-    error: true
-  }
-}
+import { frFR } from '@mui/material/locale'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import { responsiveFontSizes, unstable_createMuiStrictModeTheme } from '@mui/material/styles'
 
 export function useTheme() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
@@ -35,7 +12,7 @@ export function useTheme() {
         unstable_createMuiStrictModeTheme(
           {
             typography: {
-              fontFamily: ['Montserrat', 'Helvetica', 'sans-serif'].join(','),
+              fontFamily: ['Nexa', 'Helvetica Neue', 'sans-serif'].join(','),
               success: { color: '#4daf7c' },
               warning: { color: '#2980b9' },
               error: { color: '#C91F37' },

@@ -1,12 +1,13 @@
+import Image from 'next/image'
 import { useState } from 'react'
-import Card from '@material-ui/core/Card'
-import Avatar from '@material-ui/core/Avatar'
-import Divider from '@material-ui/core/Divider'
-import Typography from '@material-ui/core/Typography'
-import CardActionArea from '@material-ui/core/CardActionArea'
+import Card from '@mui/material/Card'
+import Divider from '@mui/material/Divider'
+import Typography from '@mui/material/Typography'
+import CardActionArea from '@mui/material/CardActionArea'
 
 import Link from 'components/utils/Link'
 import useRouter from 'components/hooks/useRouter'
+import favicon from 'public/static/images/favicons/favicon-32x32.png'
 
 const About: React.FC = () => {
   const { router } = useRouter()
@@ -124,12 +125,7 @@ interface MessageProps {
 const LeftMessage: React.FC<MessageProps> = ({ className, content, xyz }) => {
   return (
     <div className="flex items-end col-start-1 col-span-4 xyz-in" xyz={xyz}>
-      <Avatar
-        className="mr-2"
-        src="/static/images/favicons/favicon-32x32.png"
-        sx={{ width: 32, height: 32 }}
-        alt="Adrien Lenoir"
-      />
+      <Image src={favicon} alt="Adrien Lenoir" layout="fixed" />
 
       <Card className={className}>
         <Typography variant="caption" color="secondary" component="div">

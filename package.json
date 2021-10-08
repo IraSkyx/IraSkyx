@@ -3,7 +3,6 @@
   "website": "adlenoir.xyz",
   "version": "0.1.0",
   "description": "Junior Software Engineer, web ambitious.",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,25 +19,26 @@
   },
   "dependencies": {
     "@animxyz/core": "^0.6.4",
-    "@emotion/cache": "^11.4.0",
-    "@emotion/react": "^11.4.0",
-    "@emotion/server": "^11.4.0",
+    "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@material-ui/core": "^5.0.0-beta.1",
-    "@material-ui/icons": "^5.0.0-beta.1",
-    "@material-ui/lab": "^5.0.0-alpha.41",
-    "next": "^11.0.2-canary.27",
-    "react": "0.0.0-experimental-c76e4dbbc-20210722",
-    "react-dom": "0.0.0-experimental-c76e4dbbc-20210722"
+    "@mui/icons-material": "^5.0.3",
+    "@mui/lab": "^5.0.0-alpha.50",
+    "@mui/material": "^5.0.3",
+    "next": "^11.1.3-canary.50",
+    "react": "^18.0.0-alpha-6ecad79cc-20211006",
+    "react-dom": "^18.0.0-alpha-6ecad79cc-20211006"
   },
   "devDependencies": {
-    "@types/react": "17.0.15",
-    "autoprefixer": "^10.3.1",
-    "eslint": "7.31.0",
-    "eslint-config-next": "11.0.1",
+    "@types/node": "^16.10.3",
+    "@types/react": "^17.0.27",
+    "@types/react-dom": "^17.0.9",
+    "autoprefixer": "^10.3.7",
+    "critters": "0.0.10",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.2",
     "eslint-config-prettier": "^8.3.0",
-    "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.7",
-    "typescript": "4.3.5"
+    "postcss": "^8.3.9",
+    "tailwindcss": "^2.2.16",
+    "typescript": "^4.4.3"
   }
 }

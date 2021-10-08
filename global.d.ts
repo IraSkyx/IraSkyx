@@ -39,3 +39,31 @@ export declare module 'react' {
     xyz?: string
   }
 }
+
+declare module '@mui/styles/defaultTheme' {
+  interface DefaultTheme extends Theme {}
+}
+
+//@see https://codesandbox.io/s/fontsizetheme-material-demo-forked-l9u05
+
+declare module '@mui/material/styles/createTypography' {
+  interface Typography {
+    success: CSSProperties
+    warning: CSSProperties
+    error: CSSProperties
+  }
+
+  interface TypographyOptions {
+    success?: CSSProperties
+    warning: CSSProperties
+    error: CSSProperties
+  }
+}
+
+declare module '@mui/material/Typography/Typography' {
+  interface TypographyPropsVariantOverrides {
+    success: true
+    warning: true
+    error: true
+  }
+}
