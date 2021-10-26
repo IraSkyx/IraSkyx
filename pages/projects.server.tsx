@@ -9,12 +9,11 @@ import undercover from 'public/static/images/undercover-preview.png'
 import artistocratieIcon from 'public/static/images/artistocratie.png'
 import artistocratie from 'public/static/images/artistocratie-preview.png'
 
-import ProjectItem from './ProjectItem'
-import ProjectDialog from './ProjectDialog'
-import useRouter from 'components/hooks/useRouter'
+import type { Project } from 'adlenoir'
+import ProjectItem from '../components/core/projects/projectItem.client'
+import ProjectDialog from '../components/core/projects/projectDialog.client'
 
 const Projects: React.FC = () => {
-  const { router } = useRouter()
   const [open, setOpen] = useState(false)
   const [selected, setSelected] = useState<Project>()
 
@@ -27,34 +26,21 @@ const Projects: React.FC = () => {
 
   return (
     <div xyz="fade down-100% back-5 stagger-3">
-      {router.asPath === '/projects' && (
-        <>
-          <Divider className="m-4" />
+      <Divider className="m-4" />
 
-          <ImageList
-            className="grid grid-cols-1 md:grid-cols-2"
-            sx={{ transform: 'translateZ(0)' }}
-            gap={16}
-          >
-            {itemData.map((item) => (
-              <ProjectItem key={item.title} item={item} onClick={onOpen(item)} />
-            ))}
-          </ImageList>
+      <ImageList
+        className="grid grid-cols-1 md:grid-cols-2"
+        sx={{ transform: 'translateZ(0)' }}
+        gap={16}
+      >
+        {itemData.map((item) => (
+          <ProjectItem key={item.title} item={item} onClick={onOpen(item)} />
+        ))}
+      </ImageList>
 
-          <ProjectDialog open={open} item={selected} onClose={onClose} />
-        </>
-      )}
+      <ProjectDialog open={open} item={selected} onClose={onClose} />
     </div>
   )
-}
-
-export type Project = {
-  img: StaticImageData
-  icon: StaticImageData
-  title: string
-  url: string
-  content: string
-  date: Date
 }
 
 const itemData: Project[] = [

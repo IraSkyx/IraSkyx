@@ -1,12 +1,5 @@
-import { ReactElement } from 'react'
-
+import { Item } from 'adlenoir'
 import { useTheme } from 'styles/theme'
-
-export interface Item {
-  name: string
-  path: string
-  icon: ReactElement
-}
 
 const useMenuConfig = () => {
   const theme = useTheme()
@@ -19,7 +12,7 @@ const useMenuConfig = () => {
     style: { width: 48, height: 48 },
   }
 
-  const items: Item[] = [
+  return [
     {
       name: 'About',
       path: '/',
@@ -40,9 +33,7 @@ const useMenuConfig = () => {
       path: '/skills',
       icon: <lord-icon src="https://cdn.lordicon.com/dtgezzsi.json" {...props} />,
     },
-  ]
-
-  return items
+  ] as Item[]
 }
 
 export default useMenuConfig

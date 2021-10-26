@@ -4,8 +4,8 @@ import Typography from '@mui/material/Typography'
 import ImageListItem from '@mui/material/ImageListItem'
 import ImageListItemBar from '@mui/material/ImageListItemBar'
 
-import Link from 'components/utils/Link'
-import type { Project } from './Projects'
+import type { Project } from 'adlenoir'
+import Link from 'components/utils/link.client'
 
 interface ProjectItemProps {
   item: Project
@@ -40,7 +40,8 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ item, onClick }) => {
             href={item.url}
             target="_blank noreferrer noopener"
             aria-label={`To ${item.url}`}
-            size="large">
+            size="large"
+          >
             <lord-icon
               src="https://cdn.lordicon.com/udwhdpod.json"
               trigger="loop"
@@ -53,7 +54,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ item, onClick }) => {
         }
       />
     </ImageListItem>
-  );
+  )
 }
 
 export default ProjectItem

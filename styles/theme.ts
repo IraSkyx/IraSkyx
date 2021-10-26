@@ -12,7 +12,7 @@ export function useTheme() {
         unstable_createMuiStrictModeTheme(
           {
             typography: {
-              fontFamily: ['Nexa', 'Helvetica Neue', 'sans-serif'].join(','),
+              fontFamily: ['Graphik', 'Helvetica Neue', 'sans-serif'].join(','),
               success: { color: '#4daf7c' },
               warning: { color: '#2980b9' },
               error: { color: '#C91F37' },

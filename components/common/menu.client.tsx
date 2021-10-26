@@ -8,10 +8,11 @@ import { useState, SyntheticEvent, useEffect } from 'react'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
 
-import Link from 'components/utils/Link'
+import type { Item } from 'adlenoir'
+import Link from 'components/utils/link.client'
 import useRouter from 'components/hooks/useRouter'
 import useMediaQuery from 'components/hooks/useMediaQuery'
-import useMenuConfig, { Item } from 'components/hooks/useMenuConfig'
+import useMenuConfig from 'components/hooks/useMenuConfig'
 
 const Menu: React.FC = () => {
   const { router, push } = useRouter()
@@ -28,10 +29,7 @@ const Menu: React.FC = () => {
   return (
     <NoSsr>
       {isMobile ? (
-        <Paper
-          className="fixed inset-x-0 bottom-0 z-50"
-          elevation={3}
-        >
+        <Paper className="fixed inset-x-0 bottom-0 z-50" elevation={3}>
           <BottomNavigation showLabels value={value} onChange={onChange}>
             {items.map((item: Item) => (
               <BottomNavigationAction

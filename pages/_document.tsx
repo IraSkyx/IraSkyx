@@ -1,19 +1,17 @@
-import { Head as NextHead } from 'next/document'
-import Document, { Html, Main, NextScript } from 'next/document'
+/* eslint-disable @next/next/no-document-import-in-page */
+import { Html, Head as NextHead, Main, NextScript } from 'next/document'
 
-import Head from '../components/utils/Head'
+import Head from '../components/utils/head.server'
 
-export default class MyDocument extends Document {
-  render() {
-    return (
-      <Html lang="en">
-        <NextHead />
-        <Head />
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    )
-  }
+export default function Document() {
+  return (
+    <Html lang="en">
+      <NextHead />
+      <Head />
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
 }

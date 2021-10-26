@@ -6,14 +6,16 @@ const nextConfig = {
   trailingSlash: false,
   reactStrictMode: true,
   webpack5: true,
+  swcMinify: true,
   experimental: {
     reactRoot: true,
     swcLoader: true,
-    swcMinify: true,
+    conformance: true,
     optimizeCss: true,
     optimizeImages: true,
+    serverComponents: true,
     scrollRestoration: true,
-    conformance: true,
+    concurrentFeatures: true,
   },
   future: {
     strictPostcssConfiguration: true,
@@ -21,7 +23,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/fonts/Nexa.woff2',
+        source: '/fonts/Graphik.woff2',
         headers: [
           {
             key: 'Cache-Control',

@@ -7,13 +7,13 @@ import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import DialogTitle from '@mui/material/DialogTitle'
 import DialogContent from '@mui/material/DialogContent'
-import { TransitionProps } from '@mui/material/transitions'
 import DialogContentText from '@mui/material/DialogContentText'
+import type { TransitionProps } from '@mui/material/transitions'
 
 import CloseIcon from '@mui/icons-material/Close'
 
-import Link from 'components/utils/Link'
-import type { Project } from './Projects'
+import type { Project } from 'adlenoir'
+import Link from 'components/utils/link.client'
 import useMediaQuery from 'components/hooks/useMediaQuery'
 import { getRelativeTime } from 'components/utils/functions'
 
@@ -25,7 +25,7 @@ interface ProjectDialogProps {
 
 const Transition = forwardRef(function Transition(
   props: TransitionProps & {
-    children?: React.ReactElement<any, any>
+    children: React.ReactElement<any, any>
   },
   ref: React.Ref<unknown>
 ) {
@@ -50,7 +50,8 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ open, item, onClose }) =>
         className="z-10 fixed top-6 right-6 bg-gray-700/40 text-white"
         onClick={onClose}
         aria-label="Close"
-        size="large">
+        size="large"
+      >
         <CloseIcon />
       </IconButton>
 
@@ -77,7 +78,8 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ open, item, onClose }) =>
               href={item?.url}
               target="_blank noreferrer noopener"
               aria-label={`To ${item.url}`}
-              size="large">
+              size="large"
+            >
               <lord-icon
                 src="https://cdn.lordicon.com/udwhdpod.json"
                 trigger="loop"
@@ -95,7 +97,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ open, item, onClose }) =>
         <DialogContentText id="project-dialog-description">{item?.content}</DialogContentText>
       </DialogContent>
     </Dialog>
-  );
+  )
 }
 
 export default ProjectDialog

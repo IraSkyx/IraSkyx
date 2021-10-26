@@ -15,49 +15,43 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent'
 import cgi from 'public/static/images/cgi.webp'
 import rgu from 'public/static/images/rgu.webp'
 import kmtx from 'public/static/images/kmtx.png'
-import useRouter from 'components/hooks/useRouter'
 import useMediaQuery from 'components/hooks/useMediaQuery'
 
 const Employment: React.FC = () => {
-  const { router } = useRouter()
   const isMobile = useMediaQuery('md')
 
   return (
     <div xyz="fade down-100% back-5 stagger-3">
-      {router.asPath === '/employment' && (
-        <>
-          <Divider className="m-4" />
+      <Divider className="m-4" />
 
-          <Timeline className="my-8 p-0" position={isMobile ? 'right' : 'alternate'}>
-            <TLItem
-              date="Sept. 2021 - Now"
-              img={kmtx}
-              imgAlt="KMTX Logo"
-              title="Junior Software Engineer"
-              location="Remote - Paris, Île-de-France, France"
-              summary="Building the ad platform of the Open Web https://vibe.co"
-            />
+      <Timeline className="my-8 p-0" position={isMobile ? 'right' : 'alternate'}>
+        <TLItem
+          date="Sept. 2021 - Now"
+          img={kmtx}
+          imgAlt="KMTX Logo"
+          title="Junior Software Engineer"
+          location="Remote - Paris, Île-de-France, France"
+          summary="Building the ad platform of the Open Web https://vibe.co"
+        />
 
-            <TLItem
-              date="Sept. 2020 - Aug. 2021"
-              img={cgi}
-              imgAlt="CGI Logo"
-              title="Site Reliability Engineer"
-              location="Clermont-Ferrand, Auvergne-Rhône-Alpes, France"
-              summary="As a Site Reliability Engineer, I conducted a comprehensive and comparative study of state-of-the-art application monitoring tools for tracing in distributed environment including Open Telemetry, Jaeger vs Zipkin, Linkerd vs Istio."
-            />
+        <TLItem
+          date="Sept. 2020 - Aug. 2021"
+          img={cgi}
+          imgAlt="CGI Logo"
+          title="Site Reliability Engineer"
+          location="Clermont-Ferrand, Auvergne-Rhône-Alpes, France"
+          summary="As a Site Reliability Engineer, I conducted a comprehensive and comparative study of state-of-the-art application monitoring tools for tracing in distributed environment including Open Telemetry, Jaeger vs Zipkin, Linkerd vs Istio."
+        />
 
-            <TLItem
-              date="Apr. 2018 - Jun. 2018"
-              img={rgu}
-              imgAlt="Robert Gordon University Logo"
-              title="Deep Learning internship"
-              location="Aberdeen, Scotland, United Kingdom"
-              summary="I performed a relevant state-of-the-art review of Deep Learning algorithms using the DGX-1 Nvidia supercomputer. I implemented classical and novel exploratory algorithms, produced re-usable code and evaluated the code extensively with proper unit tests. This work involved some original research results."
-            />
-          </Timeline>
-        </>
-      )}
+        <TLItem
+          date="Apr. 2018 - Jun. 2018"
+          img={rgu}
+          imgAlt="Robert Gordon University Logo"
+          title="Deep Learning internship"
+          location="Aberdeen, Scotland, United Kingdom"
+          summary="I performed a relevant state-of-the-art review of Deep Learning algorithms using the DGX-1 Nvidia supercomputer. I implemented classical and novel exploratory algorithms, produced re-usable code and evaluated the code extensively with proper unit tests. This work involved some original research results."
+        />
+      </Timeline>
     </div>
   )
 }

@@ -5,25 +5,20 @@ import Divider from '@mui/material/Divider'
 import Typography from '@mui/material/Typography'
 import CardActionArea from '@mui/material/CardActionArea'
 
-import Link from 'components/utils/Link'
-import useRouter from 'components/hooks/useRouter'
+import type { MessageProps } from 'adlenoir'
+import Link from 'components/utils/link.client'
 import favicon from 'public/static/images/favicons/favicon-32x32.png'
 
-const About: React.FC = () => {
-  const { router } = useRouter()
+const Index: React.FC = () => {
   const [part, setPart] = useState(0)
 
   const onNextPart = () => setPart((part) => part + 1)
 
   return (
-    <div
-      className={router.asPath === '/' ? 'w-full min-h-64' : 'h-0'}
-      xyz="stagger-10"
-      style={{ visibility: router.asPath === '/' ? 'visible' : 'collapse' }}
-    >
+    <div className="w-full min-h-64" xyz="stagger-10">
       <Divider className="m-4" />
 
-      <div className="md:p-8 grid grid-cols-5 gap-y-2">
+      <div className="flex flex-col space-y-2 md:p-8">
         <LeftMessage
           className="bg-appPink rounded-3xl rounded-bl-none py-2 px-4"
           content="Welcome to my portfolio 👋, hopefully you will like it! It should reflect my personality and show off some of my IT skills."
@@ -114,21 +109,14 @@ const About: React.FC = () => {
   )
 }
 
-interface MessageProps {
-  className: string
-  content: React.ReactNode
-  onClick?: () => void
-  color?: string
-  xyz?: string
-}
-
 const LeftMessage: React.FC<MessageProps> = ({ className, content, xyz }) => {
   return (
-    <div className="flex items-end col-start-1 col-span-4 xyz-in" xyz={xyz}>
-      <Image src={favicon} alt="Adrien Lenoir" layout="fixed" />
-
+    <div className="flex space-x-2 w-4/5 xyz-in" xyz={xyz}>
+      <div className="flex items-end min-w-max">
+        <Image src={favicon} layout="fixed" alt="Adrien Lenoir" />
+      </div>
       <Card className={className}>
-        <Typography variant="caption" color="secondary" component="div">
+        <Typography variant="caption" color="secondary" component="span">
           {content}
         </Typography>
       </Card>
@@ -144,7 +132,7 @@ const RightMessage: React.FC<MessageProps> = ({
   xyz,
 }) => {
   return (
-    <div className="flex items-end justify-self-end col-start-4 col-span-2" xyz={xyz}>
+    <div className="flex justify-end items-end place-self-end w-4/5" xyz={xyz}>
       <Card className={className}>
         <CardActionArea
           className="py-2 px-4"
@@ -161,4 +149,4 @@ const RightMessage: React.FC<MessageProps> = ({
   )
 }
 
-export default About
+export default Index

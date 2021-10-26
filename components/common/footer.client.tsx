@@ -1,4 +1,3 @@
-import NoSsr from '@mui/material/NoSsr'
 import { useState, cloneElement } from 'react'
 import SpeedDial from '@mui/material/SpeedDial'
 import Typography from '@mui/material/Typography'
@@ -9,6 +8,7 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 import useMediaQuery from 'components/hooks/useMediaQuery'
+import { NoSsr } from '@mui/material'
 
 const Footer: React.FC = () => {
   const isMobile = useMediaQuery('md')

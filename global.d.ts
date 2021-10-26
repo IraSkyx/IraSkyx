@@ -1,4 +1,4 @@
-import { ReactText, HTMLAttributes, ReactHTMLElement } from 'react'
+import { ReactText, HTMLAttributes, ReactHTMLElement, ReactElement } from 'react'
 
 /// <reference types="react/experimental" />
 /// <reference types="react-dom/experimental" />
